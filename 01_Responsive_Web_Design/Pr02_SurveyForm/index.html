@@ -9,42 +9,161 @@
 </head>
 
 <body>
-	<h1>Encuesta sobre el colaborador del mes</h1>
-	<form action="" method="get">
-		<section id="intro">
-			<div class="desc">
-				<p>
-					Este cuestionario tiene por objeto obtener información de recursos humanos sobre el personal y los
-					posibles candidatos para ingresar al Hospital Veterinario Peninsular </p>
-				</p>
-			</div>
-		</section>
-		<section id="generalData">
-			<h2>Datos generales</h2>
-			<div>
-				<label for="name">Nombre completo</label>
-				<input type="text" name="name" id="name" placeholder="nombre completo" required>
-			</div>
-			<div>
-				<label for="sexo">Sexo</label>
-				<input type="radio" id="hombre" name="sexo" value="hombre">
-				<label for="hombre">Hombre</label><br>
-				<input type="radio" id="mujer" name="sexo" value="mujer">
-				<label for="mujer">Mujer</label><br>
-				<input type="radio" id="otro" name="sexo" value="otro">
-				<label for="otro">Otro</label>
-			</div>
-		</section>
-		<section id="academic">
-		</section>
-		<section id="experience">
-		</section>
-		<section id="skills">
-		</section>
-		<section id="aptitudes">
-		</section>
+	<header>
+		<div class="header-box">
+			<h1 id="title">Información para recursos humanos</h1>
+			<p>
+				Este cuestionario tiene por objeto obtener información de recursos humanos sobre el personal y los
+				posibles candidatos para ingresar al Hospital Veterinario Peninsular </p>
+			</p>
+		</div>
+	</header>
+	<div id="form-container">
+		<form action="" method="GET" id="survey-form">
+			<section class="section-container">
+				<div class="section-header">
+					<h2>Datos generales</h2>
+				</div>
+				<div class="labels">
+					<label for="name">Nombre completo</label>
+				</div>
+				<div class="input-tab">
+					<input type="text" class="input-field" name="name" placeholder="Nombre completo" required autofocus>
+				</div>
 
-	</form>
+				<div class="labels">
+					<label>Sexo</label></div>
+				<div class="input-tab">
+					<input type="radio" name="sexo" value="like">Hombre<br>
+					<input type="radio" name="sexo" value="love">Mujer<br>
+					<input type="radio" name="sexo" value="ok">Otros<br>
+				</div>
+
+				<div class="labels">
+					<label for="edad">Edad</label></div>
+				<div class="input-tab">
+					<input class="input-field" type="number" name="edad" min="1" max="120" value=25 required>
+				</div>
+
+				<div class="labels">
+					<label for="edad">Fecha de nacimiento</label></div>
+				<div class="input-tab">
+					<input class="input-date" type="date" value="1995-01-01" name="birthDate" min="1900-01-01"
+						max="2020-12-31" required>
+				</div>
+
+				<div class="labels">
+					<label for="direccion">Dirección</label></div>
+				<div class="input-tab">
+					<textarea class="input-field" name="direccion" rows="4" cols="40"
+						placeholder="Dirección completa"></textarea>
+				</div>
+
+				<div class="labels">
+					<label for="telFijo">Teléfono fijo</label>
+				</div>
+				<div class="input-tab">
+					<input type="text" class="input-field" name="telFijo" placeholder="Teléfono fijo" minlength="10"
+						maxlength="14">
+				</div>
+
+				<div class="labels">
+					<label for="telMovil">Teléfono móvil</label>
+				</div>
+				<div class="input-tab">
+					<input type="text" class="input-field" name="telMovil" placeholder="Teléfono móvil" minlength="10"
+						maxlength="14">
+				</div>
+
+				<div class="labels">
+					<label for="email">Correo electrónico</label></div>
+				<div class="input-tab">
+					<input class="input-field" type="email" name="email" placeholder="email@email.com" required>
+				</div>
+
+			</section>
+
+			<section class="section-container">
+				<div class="section-header">
+					<h2>Datos académicos</h2>
+				</div>
+
+				<div class="labels">
+					<label for="school">Universidad o centro de estudios</label>
+				</div>
+				<div class="input-tab">
+					<input type="text" class="input-field" name="school" placeholder="Universidad o centro de estudios">
+				</div>
+
+				<div class="labels">
+					<label for="dateStudies">Fecha de conclusión de los estudios. Si no los has concluido, fecha en que
+						está programado concluirse</label></div>
+				<div class="input-tab">
+					<input class="input-date" type="date" value="2015-01-01" name="dateStudies" min="1980-01-01"
+						max="2030-12-31" required>
+				</div>
+
+				<div class="labels">
+					<label for="dateGrade">Fecha de obtención del título. Si no los has obtenido, fecha en que está
+						programado obtenerse</label></div>
+				<div class="input-tab">
+					<input class="input-date" type="date" value="2015-01-01" name="dateGrade" min="1980-01-01"
+						max="2030-12-31" required>
+				</div>
+			</section>
+
+			<section class="section-container">
+				<div class="section-header">
+					<h2>Datos profesionales</h2>
+				</div>
+
+				<div class="labels">
+					<label for="jobExperience">Describe los últimos tres puestos de trabajo realizados: empresa, puesto
+						y fechas de inicio y de concusión</label></div>
+				<div class="input-tab">
+					<textarea class="input-field" name="jobExperience" rows="12" cols="40"
+						placeholder="Experiencia profesional"></textarea>
+				</div>
+
+				<div class="labels">
+					<label for="expYears">Años de experiencia</label></div>
+				<div class="input-tab">
+					<input class="input-field" type="number" name="expYears" min="0" max="40" value=0>
+				</div>
+
+
+			</section>
+
+		</form>
+
+	</div>
+
+	<section id="aboutme">
+		<div class="header">
+			<h2>Autor y contacto</h2>
+			<h3>Javier García</h3>
+			<p>Estos son mis datos de contacto: </p>
+		</div>
+
+		<ul class="social-font">
+			<li><a href="https://github.com/JavierGarciaGomez" target="_blank"><i class="fab fa-github"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/javier-garcia-gomez/" target="_blank"><i
+						class="fab fa-linkedin"></i></a></li>
+			<li><a href="mailto:javieron.garcia@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+			<li><a href="https://www.facebook.com/javierongarcia" target="_blank"><i class="fab fa-facebook"></i></a>
+			</li>
+			<li><a href="#https://twitter.com/javierongarcia" target="_blank"><i class="fab fa-twitter"></i></a></li>
+			<li><a href="#https://codepen.io/javier-garc-a-g-mez" target="_blank"><i class="fa fa-codepen"></i></a></li>
+		</ul>
+
+	</section>
+
+	<footer>***Este es un sitio web falso***
+		<p>&copy; Creado para <a href="https://www.freecodecamp.com/" target="_blank">FreeCodeCamp</a></p>
+	</footer>
+
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 
 </body>
 
