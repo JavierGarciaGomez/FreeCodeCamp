@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* UNIVERSAL */
+*{
+  box-sizing: border-box;
+}
+
+/* SECTIONING AND STRUCTURING */
+body, html {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif; /*Esta es la fuente para todo el cuerpo*/
+  /* text-align: center; Esta es la alineación para todo el cuerpo */
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+body {
+  font-size: 1em;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url(https://lh3.googleusercontent.com/p/AF1QipP7EvY2ITako83K0qxjG-yIBRiZhCJ6zyrl2SQw=w600-k) center no-repeat fixed;
+  background-size: cover;
+}
+
+section{
+  padding: 2em;
+}
+
+footer{
+  padding: 20px;
+  background-color: #22313F;
+  color: white;
+  line-height: 40px;
+  margin: 0px;
+}
+
+footer,  a {
+  color: white;
+} 
+
+/* HEADINGS AND TEXT */
+h1 {
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+}
+
+h2 {
+  color: darkblue;
+  text-align: center;
+}
+
+/* OTHER */
+
+hr {
+  width: 70%;
+}
+
+input {
+  margin: 1em;
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+button {
+  background-color: darkblue;
+  border-radius: 0.5em;
+  color: white;
+  font-weight: bold;
+  font-family: inherit;
+  padding: 0.5em 1em;
+  border: 0.25em solid;
+}
+
+button:hover {
+  background-color: black;
+}
+
+
+/* CLASSES */
+.header-box {
+  background-color: rgba(53, 107, 160,0.8);
+  border-radius: 2em;
+  margin: 2em auto;
+  padding: 1em;
+  width: 90%;
+}
+
+.labels {
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+  vertical-align: top;
+  margin-top: 20px;
+}
+
+.input-tab {
+  display: inline-block;
+  text-align: left;
+  width: 50%;
+  margin-left: 10px;
+}
+
+.input-field {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5em;
+  margin: 1.25em 0 0 1em;
+  border: 0.1em solid lightblue;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.author a {  
+  font-size: 2em;
+  padding: 1em;  
+  color: #134526;
+  padding: 15px;
+}
+
+.author a:hover {
+  font-size: 3em;
+}
+
+.btn {
+  text-align: center;
+  margin: 2em;
+}
+
+/* BY ID */
+#form-container {
+  background-color: rgba(22, 160, 133, 0.6);
+  border-radius: 1em;
+  margin: auto;
+  margin-bottom: 2em;
+  width: 90%;
+  padding: 1em;  
+}
+
+#survey-form {
+  margin: 0 auto;
+  width: 80%;
+  padding: 10px;
+}
+
+
+#dropdown {
+  width: 100%;
+  padding: 5px;
+  margin: 20px 0 10px 10px;  
+  border: 1px solid #e67e22;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+#aboutme {
+  justify-content: center;  
+  color: black;  
+  background: #C8F7C5;
+  padding-bottom: 160px;
+}
+
+
+/* PSEUDO ELEMENTS */
+::placeholder {
+  font-style: italic;
+ font-weight: 300;
+}
+
+/* MEDIA */
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+  
+  .labels {
+    width: 100%;
+    text-align: left;
+  }
+  .input-tab {
+    width: 100%;
+    float: left;
+    margin-left: -10px;
+  }
+  .input-field {
+    width: 100%;
+  }
+  select {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+    margin: auto;
+  }
+}

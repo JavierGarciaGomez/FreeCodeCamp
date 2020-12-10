@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="stylesheets/style.css">
+<link rel="stylesheet" href="stylesheets/all.min.css">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <link rel="stylesheet" href="style.css"> -->
-	<title>Document</title>
+	<title>RRRHH HVPET</title>
 </head>
 
 <body>
 	<header>
 		<div class="header-box">
 			<h1 id="title">Información para recursos humanos</h1>
-			<p>
+			<hr>
+			<p id="description">
 				Este cuestionario tiene por objeto obtener información de recursos humanos sobre el personal y los
 				posibles candidatos para ingresar al Hospital Veterinario Peninsular </p>
 			</p>
@@ -25,10 +28,11 @@
 					<h2>Datos generales</h2>
 				</div>
 				<div class="labels">
-					<label for="name">Nombre completo</label>
+					<label for="name" id="name-label">Nombre completo</label>
 				</div>
 				<div class="input-tab">
-					<input type="text" class="input-field" name="name" placeholder="Nombre completo" required autofocus>
+					<input type="text" class="input-field" name="name" placeholder="Nombre completo" required autofocus
+						id="name">
 				</div>
 
 				<div class="labels">
@@ -40,15 +44,16 @@
 				</div>
 
 				<div class="labels">
-					<label for="edad">Edad</label></div>
+					<label for="edad" id="number-label">Edad</label></div>
 				<div class="input-tab">
-					<input class="input-field" type="number" name="edad" min="1" max="120" value=25 required>
+					<input id="number" class="input-field" type="number" name="edad" min="1" max="120" value=25
+						placeholder="25" required>
 				</div>
 
 				<div class="labels">
 					<label for="edad">Fecha de nacimiento</label></div>
 				<div class="input-tab">
-					<input class="input-date" type="date" value="1995-01-01" name="birthDate" min="1900-01-01"
+					<input class="input-field" type="date" value="1995-01-01" name="birthDate" min="1900-01-01"
 						max="2020-12-31" required>
 				</div>
 
@@ -76,9 +81,10 @@
 				</div>
 
 				<div class="labels">
-					<label for="email">Correo electrónico</label></div>
+					<label for="email" id="email-label">Correo electrónico</label></div>
 				<div class="input-tab">
-					<input class="input-field" type="email" name="email" placeholder="email@email.com" required>
+					<input class="input-field" id="email" type="email" name="email" placeholder="email@email.com"
+						required>
 				</div>
 
 			</section>
@@ -99,7 +105,7 @@
 					<label for="dateStudies">Fecha de conclusión de los estudios. Si no los has concluido, fecha en que
 						está programado concluirse</label></div>
 				<div class="input-tab">
-					<input class="input-date" type="date" value="2015-01-01" name="dateStudies" min="1980-01-01"
+					<input class="input-field" type="date" value="2015-01-01" name="dateStudies" min="1980-01-01"
 						max="2030-12-31" required>
 				</div>
 
@@ -107,7 +113,7 @@
 					<label for="dateGrade">Fecha de obtención del título. Si no los has obtenido, fecha en que está
 						programado obtenerse</label></div>
 				<div class="input-tab">
-					<input class="input-date" type="date" value="2015-01-01" name="dateGrade" min="1980-01-01"
+					<input class="input-field" type="date" value="2015-01-01" name="dateGrade" min="1980-01-01"
 						max="2030-12-31" required>
 				</div>
 			</section>
@@ -130,9 +136,52 @@
 				<div class="input-tab">
 					<input class="input-field" type="number" name="expYears" min="0" max="40" value=0>
 				</div>
+			</section>
 
+			<section class="section-container">
+				<div class="section-header">
+					<h2>Actitudes</h2>
+				</div>
+
+				<div class="labels">
+					<label for="attitudes">Marca las aptitudes que consideres tener</label>
+				</div>
+				<div class="input-tab">
+					<input type="checkbox" name="adaptabilidad" value="adaptabilidad">Adaptabilidad<br>
+					<input type="checkbox" name="cliente" value="cliente">Atención al cliente<br>
+					<input type="checkbox" name="organizar" value="organizar">Capacidad de organizar el entorno de
+					trabajo<br>
+					<input type="checkbox" name="carisma" value="carisma">Carisma<br>
+					<input type="checkbox" name="disposicion" value="disposicion">Disposición<br>
+				</div>
 
 			</section>
+
+
+			<section class="section-container">
+				<div class="section-header">
+					<h2>Empresa</h2>
+				</div>
+
+				<div class="labels">
+					<label for="jobPosition">Puesto al que aspiras</label></div>
+				<div class="input-tab">
+					<select id="dropdown" name="jobPosition">
+						<option disabled value selected>Selecciona una opción</option>
+						<option value="vetA">Veterinario A</option>
+						<option value="vetB">Veterinario B</option>
+						<option value="asiA">Asistente A</option>
+						<option value="asiB">Asistente B</option>
+						<option value="rec">Recepcionista</option>
+						<option value="pas">Servicio social</option>
+						<option value="ser">Servicios social</option>
+					</select>
+				</div>
+			</section>
+
+			<div class="btn">
+				<button id="submit" type="submit">Submit</button>
+			</div>
 
 		</form>
 
@@ -145,15 +194,21 @@
 			<p>Estos son mis datos de contacto: </p>
 		</div>
 
-		<ul class="social-font">
-			<li><a href="https://github.com/JavierGarciaGomez" target="_blank"><i class="fab fa-github"></i></a></li>
+		<ul class="author">
+
 			<li><a href="https://www.linkedin.com/in/javier-garcia-gomez/" target="_blank"><i
 						class="fab fa-linkedin"></i></a></li>
 			<li><a href="mailto:javieron.garcia@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+			<li><a href="https://github.com/JavierGarciaGomez" target="_blank"><i class="fab fa-github"></i></a></li>
+			<li><a href="#https://codepen.io/javier-garc-a-g-mez" target="_blank"><i class="fab fa-codepen"></i></a>
+			</li>
+			<li><a href="https://www.freecodecamp.org/javiergarcia" target="_blank"><i
+						class="fab fa-free-code-camp"></i></a>
+			</li>
 			<li><a href="https://www.facebook.com/javierongarcia" target="_blank"><i class="fab fa-facebook"></i></a>
 			</li>
 			<li><a href="#https://twitter.com/javierongarcia" target="_blank"><i class="fab fa-twitter"></i></a></li>
-			<li><a href="#https://codepen.io/javier-garc-a-g-mez" target="_blank"><i class="fa fa-codepen"></i></a></li>
+
 		</ul>
 
 	</section>
