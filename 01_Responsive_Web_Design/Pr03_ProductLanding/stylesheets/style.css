@@ -27,6 +27,9 @@ img{
   justify-content: center;
 }
 
+h2{
+  text-align: center;
+}
 /* NAV */
 
 nav{
@@ -72,9 +75,7 @@ nav{
 }
 
 /* Services */
-#serv h2{
-  text-align: center;
-}
+
 
 .service-image{
   max-height: 10em;
@@ -109,7 +110,7 @@ nav{
 /* CONTACT */
 #contact{
   padding: 2em;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/cat.jpg") center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://github.com/JavierGarciaGomez/FreeCodeCamp/blob/main/01_Responsive_Web_Design/Pr03_ProductLanding/images/Morgana.jpg?raw=true") center no-repeat;
   background-size: cover;
   margin: 0;
   width: 100%;
@@ -144,7 +145,7 @@ footer ul{
 footer a {  
   font-size: 2em;
   padding: 1em;  
-  color: #134526;
+  color: cyan;
   padding: 15px;
 }
 
@@ -159,4 +160,24 @@ footer a {
 }
 
 
+@media (max-width: 700px){
+  .header-left, .header-right{
+      width: 100%;
+  }
+
+  .header-right{
+      order: 0;
+  }
+
+  .header-left{
+      order: 1;
+      text-align: center;
+      padding-right: 0;
+  }
+
+  .service-container{
+      width: 100%;
+      margin: 1em;
+  }
+}
 

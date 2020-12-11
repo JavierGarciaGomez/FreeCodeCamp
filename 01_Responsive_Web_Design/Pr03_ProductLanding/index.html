@@ -18,14 +18,16 @@
 		<nav id="nav-bar">
 			<a href="#header" class="nav-link">About</a>
 			<a href="#serv" class="nav-link">Servicios</a>
-			<a href="#video" class="nav-link">Video</a>
+			<a href="#vid" class="nav-link">Video</a>
 			<a href="#contact" class="nav-link">Contacto</a>
 
 		</nav>
 
 		<div class="container" id="cover">
 			<div class="header-left">
-				<img id="header-img" src="./images/HVPLogoNoBg.png" alt="thumbnail">
+				<img id="header-img"
+					src="https://github.com/JavierGarciaGomez/FreeCodeCamp/blob/main/01_Responsive_Web_Design/Pr03_ProductLanding/images/HVPLogoNoBg.png?raw=true"
+					alt="thumbnail">
 			</div>
 			<div class="header-right">
 				<h2>El especialista en cuestión siempre es la mejor opción</h2>
@@ -103,10 +105,10 @@
 
 	</section>
 
-	<section id="video">
+	<section id="vid">
 		<h2>Video de aniversario</h2>
 		<div class="container">
-			<iframe width="600" height="337" src="https://www.youtube.com/embed/qNzuMdmLWJQ" frameborder="0"
+			<iframe id="video" width="600" height="337" src="https://www.youtube.com/embed/qNzuMdmLWJQ" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen></iframe>
 		</div>
@@ -127,12 +129,14 @@
 		</div>
 
 		<div class="container">
-			<form action="">
+			<form action="https://www.freecodecamp.com/email-submit" id="form">
 				<h2>Suscríbete en nuestro newsletter</h2>
 				<div class="flex">
-					<input type="email" name="" id="" placeholder="Enter your email">
-					<button class="btn btn-ghost">Submit</button>
+					<form id="form">
 
+						<input type="email" name="email" id="email" placeholder="Enter your email">
+						<input type="submit" value="Submit" id="submit">
+					</form>
 				</div>
 
 			</form>
