@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<link rel="stylesheet" href="stylesheets/all.min.css">
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Hospital Veterinario Peninsular</title>
+</head>
+
+<body>
+	<nav id="navbar">
+		<header>Presentación del proyecto final</header>
+		<a href="#1._Introducción" class="nav-link">1. Introducción</a>
+		<a href="#1.1_Motivación" class="nav-link">1.1 Motivación</a>
+		<a href="#1.2_Abstract" class="nav-link">1.2 Abstract</a>
+		<a href="#1.3_Objetivos" class="nav-link">1.3 Objetivos</a>
+		<a href="#2._Metodología_utilizada" class="nav-link">2. Metodología utilizada</a>
+		<a href="#3._Tecnologías_y_herramientas_utilizadas" class="nav-link">3. Tecnologías y herramientas
+			utilizadas</a>
+	</nav>
+
+	<main id="main-doc">
+
+		<section class="main-section" id="1._Introducción">
+			<header class="h1Header">1. Introducción</header>
+		</section>
+		<section class="main-section" id="1.1_Motivación">
+			<header class="h2Header">1.1 Motivación</header>
+			<p>Este proyecto se elabora como parte del ciclo de formación profesional de Desarrollo de Aplicaciones
+				Multiplataforma y consiste en una aplicación para escritorio que apoye en la gestión de distintas
+				funciones administrativas al Hospital Veterinario Peninsular.</p>
+
+			<h3>Antecedentes de la empresa</h3>
+			<p>El Hospital Veterinario Peninsular es una empresa mexicana, con sede en la ciudad de Mérida, Yucatán, que
+				comenzó a funcionar en 1990. A lo largo de estos treinta años de historia ha había formado de forma
+				independiente, hasta que, en 2016, por medio de un acuerdo comercial con la cadena norteamericana para
+				mascotas Petco, se estableció como una sección de las sucursales de estas tiendas en la ciudad de
+				Mérida, dedicado exclusivamente a la prestación del servicio veterinario y venta de medicamentos con
+				receta, en tanto que la tienda es la única que puede comercializar con alimentos, productos y juguetes
+				para mascota.</p>
+			<p>Desde la referida alianza en 2017, se han abierto dos sucursales nuevas, una en 2018 y la otra en 2019, y
+				se cerró la sucursal que se tenía independientemente antes de la mencionada alianza. En este sentido, y
+				esto es una razón fundamental del proyecto, hasta antes de 2017 solo existía una sucursal y ahora se
+				cuentan con tres sucursales diferentes.</p>
+
+			<h3>Software de la empresa</h3>
+			<p>La empresa desde hace varios años ha trabajado con el software QVET, que es definido por la misma empresa
+				que lo desarrolla y distribuye como:</p>
+			<div class="quote">Es el programa de gestión de clínicas y hospitales veterinarios más completo del mercado
+				en lengua
+				española y que más veterinarios utilizan en sus negocios.</div>
+
+			<p>Los más de 20 años de experiencia y el extenso uso de QVET por más de 6.000 clínicas en 30 países hacen
+				que nuestros ingenieros hayan desarrollado un sistema muy completo en el que todas las necesidades del
+				centro veterinario estén resueltas de forma segura, estable y fácil de utilizar.</p>
+			<p> Sin embargo, la administración ante la imposibilidad de realizar determinadas funciones en el referido
+				software o no realizarlas tal como lo necesita, ha incorporado otros softwares más concretos e incluso
+				diseñado e implementado numerosas hojas de cálculo que, con el apoyo del lenguaje VBA, han logrado
+				optimizar varias de estas funciones.
+			</p>
+			<p> Por cuestiones propias de la empresa, el software contratado con QVET funciona solo de forma local, por
+				lo que se contrataron dos licencias para las sucursales grandes y la pequeña funciona sin software, por
+				lo que la información relacionada con los datos del personal, clientes, servicios y expedientes no se
+				sincronizan y ni siquiera se comparten.
+			</p>
+
+			<h3>Necesidad del proyecto</h3>
+			<p>En este orden de ideas lo que se pretende es, en una primera etapa, modernizar los registros que se hacen
+				actualmente en hojas de cálculo y con VBA así como implementar funcionalidades que nos otorgan las bases
+				de datos y el lenguaje Java.</p>
+			<p>En esta primera etapa el proyecto contendrá principalmente los módulos de calendarización de horarios,
+				registros de entradas y salidas, agenda de citas y gestión de la información de los colaboradores.</p>
+		</section>
+		<section class="main-section" id="1.2_Abstract">
+			<header class="h2Header">1.2 Abstract</header>
+			<p>The main objective of this project is to design and implement an application that supports the
+				administration and collaborators in the management of the Hospital Veterinario Peninsular, in the
+				activities
+				of registration of new collaborators, the programming of work calendars, the record of entries and
+				exits,
+				and to schedule appointments.</p>
+
+			<p>The motivation for selecting this topic was that the development team had previously collaborated with
+				the
+				company in similar projects, but with other technologies and empirical knowledge of the team regarding
+				the
+				functions and activities of the company.</p>
+			<p> For the development of this project, Java was used as the programming language, a MySQL database on a
+				Google
+				Cloud Platform server was utilized to manage the data, as well as the software tools and technologies:
+				Maven, Hibernate, and JavaFX. Due to its intuitiveness, IntelliJ Idea Ultimate was selected as the
+				integrated development environment.
+			</p>
+			<p>The project developed the following modules for the administration of the Hospital Veterinario
+				Peninsular:</p>
+			<ol>
+				<li>a) Login module, for user authentication and determining the roles for access to the rest of the
+					modules.</li>
+				<li> b) Employee administration module, to register and edit the information of the company's employees,
+					including, in addition to their personal data, their data as a user of the application and their
+					working
+					conditions.
+				</li>
+				<li>c) Work calendar module, which allows the administration to schedule the staff's work shifts and
+					have useful
+					validation mechanisms.</li>
+				<li>d) Entry and exit registration module, which is very useful for calculating payroll and granting
+					punctuality
+					bonuses.</li>
+				<li>e) Appointment module, to schedule the services provided by the company.</li>
+				<li>f) Incident module, so that users can present incidents, and the administration solve them.</li>
+			</ol>
+		</section>
+		<section class="main-section" id="1.3_Objetivos">
+			<header class="h2Header">1.3 Objetivos</header>
+			<h3>Objetivo general</h3>
+			<p>Diseñar e implementar una aplicación que apoye a la administración y a los colaboradores en la gestión
+				del Hospital Veterinario Peninsular, en las actividades de registro de nuevos colaboradores, la
+				programación de calendarios de trabajos, el registro de entradas y salidas y la agenda de citas.</p>
+			<h3>Objetivos específicos</h3>
+			<ol>
+				<li>a) Realizar la autenticación de los usuarios y permitir que puedan acceder a distintos módulos y
+					vistas específicas dependiendo de si se han autenticado y de su rol.</li>
+				<li>b) Registrar y editar la información de los colaboradores de la empresa, incluyendo además de sus
+					datos
+					personales, sus datos como usuario de la aplicación y sus condiciones de trabajo.</li>
+				<li>c) Permitir a la administración calendarizar los turnos de trabajo del personal y contar con
+					mecanismos
+					de validación útiles.</li>
+				<li>d) Registrar las entradas y salidas en las diversas sucursales de la empresa, así como llevar un
+					control
+					sobre sus retardos y bonos de puntualidad.</li>
+				<li>e) Agendar citas de los servicios que presta la empresa en cada una de sus sucursales.</li>
+				<li>f) Ingresar y gestionar incidentes relacionados con la calendarización de jornadas de trabajo y
+					registro
+					de horarios, así como cualquier situación relacionada con la aplicación.</li>
+				<li>g) Agregar y modificar aspectos relacionados con la empresa, accesorios para el resto de los módulos
+					como son las sucursales, los horarios de apertura, los puestos de trabajo y los tipos de jornadas de
+					trabajo.</li>
+			</ol>
+		</section>
+
+		<section class="main-section" id="2._Metodología_utilizada">
+			<header class="h1Header">2. Metodología utilizada</header>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores libero odit quibusdam ratione, saepe
+				magnam eius ipsum fugiat est culpa quam sit nemo officia tenetur, ex provident consequuntur deleniti
+				blanditiis?</p>
+			<p>Para el análisis, diseño e implementación de este proyecto se utilizaron tanto los modelos
+				iterativo-incremental como el modelo en cascada con retroalimentación. Se utilizó el modelo
+				iterativo-incremental en virtud de que uno de los módulos debía entregarse primero: el de la agenda de
+				citas; pero en su mayoría se utilizó el modelo en cascada.</p>
+			<p>El modelo iterativo-incremental nos ofrece como ventajas que no se necesitan conocer todos los
+				requisitos,
+				que se permiten hacer entregas tempranas operativas al cliente y que las entregas facilitan la
+				retroalimentación de los próximos entregables.</p>
+			<p>Por su parte el modelo en cascada nos ofrece las ventajas de que es fácil de comprender, planificar y
+				seguir, que la calidad del producto resultante es alta y que permite trabajar con personal poco
+				cualificado.
+				Como se ha mencionado, si bien se utilizó el modelo iterativo-incremental para un módulo en específico,
+				en
+				realidad la metodología predominante es el modelo en cascada con retroalimentación, el cual cuenta con
+				el
+				siguiente ciclo de vida: análisis, diseño, codificación, pruebas y mantenimiento</p>
+
+		</section>
+
+		<section class="main-section" id="3._Tecnologías_y_herramientas_utilizadas">
+			<header class="h1Header">3. Tecnologías y herramientas utilizadas</header>
+			<p>El lenguaje de programación elegido para el desarrollo de la aplicación es Java.</p>
+			<p>El IDE utilizado fue IntelliJ Idea 2020.1.3 (Ulitmate Edition), las razones de esto son variadas, pero la
+				más destacada es su intuitividad. Si bien se podría hacer una lista detallada de los motivos de esta
+				elección consideramos que es más claro transmitir esta idea como elemento central. Adicionalmente se
+				utilizaron como herramientas adicionales MySQL WorkBench, Google Cloud Platform y el Scene Builder.</p>
+			<p>Entre las herramientas y librerías utilizadas destacamos las siguientes: Maven, Hibernate y JavaFX</p>
+			<p><code>html</code><code>css</code><code>java</code><code>JavaScript</code><code>Angular</code></p>
+		</section>
+
+
+		<footer>
+			<p> Creado por Javier García, para <a href="https://www.freecodecamp.com/" target="_blank"
+					class="no-style-link">FreeCodeCamp&copy;</a></p>
+			<div>
+				<ul class="author">
+					<li><a href="https://www.linkedin.com/in/javier-garcia-gomez/" target="_blank"><i
+								class="fab fa-linkedin"></i></a></li>
+					<li><a href="mailto:javieron.garcia@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+					</li>
+					<li><a href="https://github.com/JavierGarciaGomez" target="_blank"><i class="fab fa-github"></i></a>
+					</li>
+					<li><a href="#https://codepen.io/javier-garc-a-g-mez" target="_blank"><i
+								class="fab fa-codepen"></i></a>
+					</li>
+					<li><a href="https://www.freecodecamp.org/javiergarcia" target="_blank"><i
+								class="fab fa-free-code-camp"></i></a>
+					</li>
+					<li><a href="https://www.facebook.com/javierongarcia" target="_blank"><i
+								class="fab fa-facebook"></i></a>
+					</li>
+					<li><a href="#https://twitter.com/javierongarcia" target="_blank"><i class="fab fa-twitter"></i></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+
+		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+
+	</main>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap');
+
+*{
+    box-sizing: border-box;
+    border: yellow solid 1px;
+}
+
+body{
+    background-color: #FCF0CC; /* A64253 861657*/
+    font-family: "Andika New Basic", "Sans Serif";
+    margin: 0;
+    /* display: flex;
+    margin: 0; */
+}
+
+/* GENERAL */
+
+/* HEADER */
+
+header{
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80');
+    color: white;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    
+}
+
+header::after{
+    content:'';
+    background-color: black;
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.4;
+}
+
+header *{
+    position: relative;
+    z-index: 1;
+}
+/* NAV */
+nav{
+    background-color: #A64253;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a{
+    color: white;
+    margin-left: 1.25em;
+    text-decoration: none;
+}
+
+
+/* FOOTER */
+footer{
+    background-color: #A64253;
+    color: white;
+    padding: 0.66em;
+}
+
+/*  */
+
