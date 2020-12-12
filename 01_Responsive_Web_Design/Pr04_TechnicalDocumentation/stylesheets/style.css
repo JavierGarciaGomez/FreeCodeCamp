@@ -1,152 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
-/* UNIVERSAL */
 *{
-  box-sizing: border-box;
-  margin: 0 0;
-  
+    box-sizing: border-box;
+    border: solid red 1px;
+    
 }
 
 body{
-  font-family: "JetBrains Mono", "Sans Serif";
-  margin: 3em 0 0;
+    display: flex;
+    font-family: "Noto Sans JP", "Sans Serif";
+    margin: 10;
 }
 
-img{
-  max-width: 100%;
-}
-
-
-
-.container{
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 85%;
-  margin:1em auto;
-  padding-top: 3em;
-  justify-content: center;
-}
-
-h2{
-  text-align: center;
-}
-/* NAV */
-
-nav{
-  background-color: #200869;
-  display: flex;
-  justify-content: center;
-  padding: 1em;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.nav-link{
-  color: white;
-  text-decoration: none;
-  padding: 0 1em;
-}
-
-/* HEADER */
-.header-left{
-  display: flex;
-  align-items: center;
-  justify-content: center;    
-  width: 50%;
-  padding: 1em;
-}
-
-.header-right{
-  width: 50%;
-  margin: auto 0;
-  padding: 1em;
-  text-align: center;
-  text-justify: center;
-}
-.header-right h2{
-  font-size: 2em;
-  margin: 1em 1em;
-}
-.header-right p{
-  font-size: 1.25em;
-  margin: 1em 2em;
-}
-
-/* Services */
-
-
-.service-image{
-  max-height: 10em;
-  max-width: 10em;
-}
-
-.service-container{  
-  background-color: rgba(32, 8, 207, 1);
-  border-radius: 1em;
-  box-shadow: 2px 2px 10px rgba(19, 16gh, 207, 0.7);
-  margin: 0 1%;
-  padding: 1em;
-  width: 20%;
-  text-align: center;
-  color: white;  
-}
-
-.service-title{
-  font-size: 0.75em; 
-  font-weight: bold;   
-}
-
-.service-text{
-  font-size: 0.75em;
-  line-height: 1.5em;
+p{
   text-align: justify;
 }
 
-/* VIDEO */
+main{
+    height: 100vh;    
+    overflow-y: scroll;
+    background-color: #f7f7da;
+}
+
+section{
+    padding: 1em;
+    line-height: 1.5;
+}
+
+header{
+    font-size: 1.75em;
+    padding: 1em;
+    font-weight: bold;
+}
 
 
-/* CONTACT */
-#contact{
-  padding: 2em;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://github.com/JavierGarciaGomez/FreeCodeCamp/blob/main/01_Responsive_Web_Design/Pr03_ProductLanding/images/Morgana.jpg?raw=true") center no-repeat;
-  background-size: cover;
-  margin: 0;
-  width: 100%;
-  color: white;
+/* NAV */
+
+nav{
+    background-color: #d1d1d1;
+    max-width: 25%;
+    height: 100vh;
+    border-right: 2px solid #777;
+}
+
+nav header{
   text-align: center;
 }
 
-#contact a i{
-  font-size: 4em;
-  padding: 0.25em 0.5em;
-  color: white;
+nav a{
+    color: #000;
+    display: block;
+    padding: 1em;
+    border: 2px solid #ddd;
+    text-decoration: none;
 }
 
-#contact a i:hover{
-  color: blue;
+/* MAIN */
+
+.h2Header{
+font-size: 1.25em;
 }
+
+.h3Header{
+  font-size: 1em;
+}
+
+.quote{
+  margin-left: 6em;
+}
+
 
 /* AUTHOR */
 footer{
   margin: 0;
-  padding-top:;
   background-color: black;
   color: white;
+  
 }
 
-footer ul{
+footer p, footer ul{
+  margin: 0;
+  text-align: center;
+
+}
+footer ul{  
   display: flex;
   text-decoration: none;
   list-style-type: none;
   justify-content: center;
+  margin: 0;
 }
+
 footer a {  
   font-size: 2em;
-  padding: 1em;  
-  color: cyan;
-  padding: 15px;
+  padding: 0 1em;  
+  color: cyan;  
 }
 
 .author a:hover {
@@ -157,27 +105,31 @@ footer a {
   font-size: 1em;
   text-decoration: none;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
-
 @media (max-width: 700px){
-  .header-left, .header-right{
-      width: 100%;
+  body {
+      flex-direction: column;
   }
 
-  .header-right{
-      order: 0;
+  nav{
+    border-right: none;
+    max-width: 100%;
+    height: fit-content;
+    
   }
 
-  .header-left{
-      order: 1;
-      text-align: center;
-      padding-right: 0;
+  nav header{
+    font-size: 1em;
+    line-height: 0;
   }
 
-  .service-container{
-      width: 100%;
-      margin: 1em;
+  nav a{
+    font-size: 0.75em;
+    line-height: 0;
   }
+
 }
 
