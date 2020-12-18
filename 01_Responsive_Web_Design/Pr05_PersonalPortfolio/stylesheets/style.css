@@ -1,135 +1,175 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap');
+
+:root{
+--maincolor: #A7d49B;
+--secondarycolor: #546A7B;
+--tertiarycolor:#5A1807;
+}
+
 
 *{
     box-sizing: border-box;
-    
-    
+    font-size: 16px;
 }
 
 body{
-    display: flex;
-    font-family: "Noto Sans JP", "Sans Serif";
-    margin: 10;
+    background-color: var(--maincolor); /* A64253 861657*/
+    font-family: "Andika New Basic", "Sans Serif";
+    margin: 0;
+    /* display: flex;
+    margin: 0; */
 }
 
-p{
-  text-align: justify;
-}
-
-main{
-    height: 100vh;    
-    overflow-y: scroll;
-    background-color: #f7f7da;
-}
-
+/* GENERAL */
 section{
-    padding: 1em;
-    line-height: 1.5;
+    text-align: center;
+    padding: 3em;
 }
 
-header{
-    font-size: 1.75em;
-    padding: 1em;
-    font-weight: bold;
+section h2{
+    margin: 0;
 }
-
+section p {
+    margin-top: 0;
+}
+.tertiarybg{
+    background-color: var(--tertiarycolor);
+}
 
 /* NAV */
-
 nav{
-    background-color: #d1d1d1;
-    max-width: 25%;
-    height: 100vh;
-    border-right: 2px solid #777;
-}
-
-nav header{
-  text-align: center;
+    background-color: var(--secondarycolor);
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 }
 
 nav a{
-    color: #000;
-    display: block;
-    padding: 1em;
-    border: 2px solid #ddd;
+    color: white;
+    margin-left: 1.25em;
     text-decoration: none;
 }
 
-/* MAIN */
-
-.h2Header{
-font-size: 1.25em;
+nav a:hover{
+    text-decoration: underline;
+    color: yellow;
 }
 
-.h3Header{
-  font-size: 1em;
+/* HEADER */
+
+#welcome-section{
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80');
+    color: white;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.quote{
-  margin-left: 6em;
+#welcome-section::after{
+    content:'';
+    background-color: black;
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
 }
 
+header *{
+    position: relative;
+    z-index: 1;
+}
 
-/* AUTHOR */
+header h1{
+    margin: 0;
+    font-size: 4em;
+}
+
+header p{
+    font-size: 2em;
+    text-align: center;
+}
+
+/* PROJECTS */
+.projects-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 78em;
+    margin: 1em auto 0;
+}
+
+.project{
+    max-width: 25em;
+    margin: 0.75em;    
+}
+
+.project img{
+    max-width: 100%;
+}
+
+.project p{
+    font-size: 1.5em;
+}
+
+/* SOCIAL */
+#social{
+    color: var(--maincolor);
+}
+
+#social-ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#social-ul i{
+    color: var(--secondarycolor);
+    font-size: 2em;
+    margin: 0 0.75em; 
+}
+
+#social-ul i:hover{
+    color: var(--maincolor);
+    font-size: 2.5em;
+    margin: 0 0.75em; 
+}
+
+/* FOOTER */
 footer{
-  margin: 0;
-  background-color: black;
-  color: white;
-  
+    background-color: var(--secondarycolor);
+    color: white;
+    padding: 0.66em;
+    text-align: center;
 }
 
-footer p, footer ul{
-  margin: 0;
-  text-align: center;
+/* MEDIA QUERY */
 
-}
-footer ul{  
-  display: flex;
-  text-decoration: none;
-  list-style-type: none;
-  justify-content: center;
-  margin: 0;
-}
-
-footer a {  
-  font-size: 2em;
-  padding: 0 1em;  
-  color: cyan;  
-}
-
-.author a:hover {
-  font-size: 3em;
-}
-
-.no-style-link{
-  font-size: 1em;
-  text-decoration: none;
-  color: white;
-  margin: 0;
-  padding: 0;
-}
 
 @media (max-width: 700px){
-  body {
-      flex-direction: column;
+    *{
+        font-size: 12px;
+    }
+  
+    nav{
+        display: none;
+    }
+  
   }
-
-  nav{
-    border-right: none;
-    max-width: 100%;
-    height: fit-content;
-    
-  }
-
-  nav header{
-    font-size: 1em;
-    line-height: 0;
-  }
-
-  nav a{
-    font-size: 0.75em;
-    line-height: 0;
-  }
-
-}
-
+  
+  

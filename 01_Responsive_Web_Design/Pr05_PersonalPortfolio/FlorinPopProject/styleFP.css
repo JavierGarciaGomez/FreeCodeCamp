@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap');
 
 :root{
---maincolor: #FCF0CC;
---secondarycolor: #861657;
---tertiarycolor:#A64253;
+--maincolor: #A7d49B;
+--secondarycolor: #546A7B;
+--tertiarycolor:#5A1807;
 }
 
 
 *{
     box-sizing: border-box;
-    border: black solid 1px;
     font-size: 16px;
 }
 
@@ -44,6 +43,11 @@ nav{
     padding: 1em;
     display: flex;
     justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 }
 
 nav a{
@@ -52,9 +56,14 @@ nav a{
     text-decoration: none;
 }
 
+nav a:hover{
+    text-decoration: underline;
+    color: yellow;
+}
+
 /* HEADER */
 
-header{
+#welcome-section{
     height: 100vh;
     background-image: url('https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80');
     color: white;
@@ -67,7 +76,7 @@ header{
     flex-direction: column;
 }
 
-header::after{
+#welcome-section::after{
     content:'';
     background-color: black;
     position:absolute;
@@ -75,7 +84,7 @@ header::after{
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 header *{
@@ -98,17 +107,28 @@ header p{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    max-width: 78em;
+    margin: 1em auto 0;
 }
 
 .project{
-    max-width: 30em;    
+    max-width: 25em;
+    margin: 0.75em;    
 }
 
 .project img{
     max-width: 100%;
-    height: 80%;
 }
+
+.project p{
+    font-size: 1.5em;
+}
+
 /* SOCIAL */
+#social{
+    color: var(--maincolor);
+}
+
 #social-ul{
     display: flex;
     justify-content: center;
@@ -118,11 +138,16 @@ header p{
 }
 
 #social-ul i{
-    color: white;
+    color: var(--secondarycolor);
     font-size: 2em;
     margin: 0 0.75em; 
 }
 
+#social-ul i:hover{
+    color: var(--maincolor);
+    font-size: 2.5em;
+    margin: 0 0.75em; 
+}
 
 /* FOOTER */
 footer{
@@ -132,4 +157,18 @@ footer{
     text-align: center;
 }
 
-/*  */
+/* MEDIA QUERY */
+
+
+@media (max-width: 700px){
+    *{
+        font-size: 12px;
+    }
+  
+    nav{
+        display: none;
+    }
+  
+  }
+  
+  
