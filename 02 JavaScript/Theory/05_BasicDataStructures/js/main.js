@@ -1,118 +1,293 @@
 // 1
-let a = 5;
-let b = 1;
-a++;
-// Only change code below this line
-console.log(a)
+let yourArray = ['string', 0, true, 2, 4]; // Change this line
 
-let sumAB = a + b;
-console.log(sumAB);
 // 2
-// Open your browser console.
-let output = "Get this to log once in the freeCodeCamp console and twice in the browser console";
-// Use console.log() to print the output variable.
-console.log(output)
-// Run the tests to see the difference between the two consoles.
-
-// Now, add console.clear() before your console.log() to clear the browser console, and pass the tests.
-console.clear()
-// 3
-let seven = 7;
-let three = "3";
-console.log(seven + three);
-console.log(typeof seven);
-console.log(typeof three);
+let myArray = ["a", "b", "c", "d"];
 // Only change code below this line
-
-// 4
-let receivables = 10;
-let payables = 8;
-let netWorkingCapital = receivables - payables;
-console.log(`Net working capital is: ${netWorkingCapital}`);
-// 5
-let myArray = [1, 2, 3];
-let arraySum = myArray.reduce((previous, current) => previous + current);
-console.log(`Sum of array values is: ${arraySum}`);
-// 6
-let innerHtml = "<p>Click here to <a href=\"#Home\">return home</a></p>";
-console.log(innerHtml);
-// 7
-let x = 7;
-let y = 9;
-let result = "to come";
-
-if (x === y) {
-    result = "Equal!";
-} else {
-    result = "Not equal!";
-}
-
-console.log(result);
-// 8
-function getNine() {
-    let x = 6;
-    let y = 3;
-    return x + y;
-}
-
-let result = getNine();
-console.log(result);
-// 9
-function raiseToPower(b, e) {
-    return Math.pow(b, e);
-}
-
-let base = 2;
-let exp = 3;
-let power = raiseToPower(base, exp);
-console.log(power);
-// 10
-function countToFive() {
-    let firstFive = "12345";
-    let len = firstFive.length;
+myArray[1] = 2;
+// Only change code above this line
+console.log(myArray);
+// 3
+function mixedNumbers(arr) {
     // Only change code below this line
-    for (let i = 0; i < len; i++) {
+    arr.unshift('I', 2, 'three')
+    arr.push(7, 'VIII', 9)
+    // Only change code above this line
+    return arr;
+}
+
+console.log(mixedNumbers(['IV', 5, 'six']));
+// 4
+function popShift(arr) {
+    let popped = arr.pop(); // Change this line
+    let shifted = arr.shift(); // Change this line
+    return [shifted, popped];
+}
+
+console.log(popShift(['challenge', 'is', 'not', 'complete']));
+
+// 5
+const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+// Only change code below this line
+arr.splice(1, 4)
+// Only change code above this line
+console.log(arr);
+// 6
+function htmlColorNames(arr) {
+    // Only change code below this line
+    arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond')
+    // Only change code above this line
+    return arr;
+}
+
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+// 7
+function forecast(arr) {
+    // Only change code below this line
+    let newArr = arr.slice(2, 4);
+    return newArr;
+}
+
+// Only change code above this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+// 8
+function copyMachine(arr, num) {
+    let newArr = [];
+    while (num >= 1) {
+        // Only change code below this line
+        newArr.push([...arr]);
         // Only change code above this line
-        console.log(firstFive[i]);
+        num--;
     }
+    return newArr;
 }
 
-countToFive();
+console.log(copyMachine([true, false, true], 2));
+// 9
+function spreadOut() {
+    let fragment = ['to', 'code'];
+    let sentence = ['learning', ...fragment, 'is', 'fun']; // Change this line
+    return sentence;
+}
+
+console.log(spreadOut());
+// 10
+function quickCheck(arr, elem) {
+    // Only change code below this line
+    let index = arr.indexOf(elem);
+    if (index !== -1) {
+        return true
+    }
+    return false
+    // Only change code above this line
+}
+
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 // 11
-function zeroArray(m, n) {
-    // Creates a 2-D array with m rows and n columns of zeroes
-    let newArray = [];
-    let row = [];
-    for (let i = 0; i < m; i++) {
-        // Adds the m-th row into newArray
-
-        for (let j = 0; j < n; j++) {
-            // Pushes n zeroes into the current row to create the columns
-            row.push(0);
+function filteredArray(arr, elem) {
+    let newArr = [];
+    // Only change code below this line
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+        if (!arr[i].includes(elem)) {
+            newArr.push(arr[i])
         }
-        n = 0;
-        // Pushes the current row, which now has n zeroes in it, to the array
-        newArray.push(row);
     }
-    return newArray;
+    // Only change code above this line
+    return newArr;
 }
 
-let matrix = zeroArray(3, 2);
-console.log(matrix);
+console.log(filteredArray([
+    [3, 2, 3],
+    [1, 6, 3],
+    [3, 13, 26],
+    [19, 3, 9]
+], 3));
 // 12
-function myFunc() {
-    for (let i = 1; i <= 4; i += 2) {
-        console.log("Still going!");
-    }
-}
+let myNestedArray = [
+    // Only change code below this line
+    ['unshift', false, 1, 2, 3, 'complex', 'nested'],
+    [
+        ['deep',
+            ['deeper', [
+                'deepest', 'a'
+            ]]
+        ]
+    ]
+]
+// Only change code above this line
+;
 // 13
+let foods = {
+    apples: 25,
+    oranges: 32,
+    plums: 28
+};
+
+// Only change code below this line
+foods.bananas = 13;
+foods.grapes = 35;
+foods.strawberries = 27;
+// Only change code above this line
+
+console.log(foods);
 // 14
+let userActivity = {
+    id: 23894201352,
+    date: 'January 1, 2017',
+    data: {
+        totalUsers: 51,
+        online: 42
+    }
+};
+
+// Only change code below this line
+userActivity.data.online = 45;
+// Only change code above this line
+
+console.log(userActivity);
 // 15
+let foods = {
+    apples: 25,
+    oranges: 32,
+    plums: 28,
+    bananas: 13,
+    grapes: 35,
+    strawberries: 27
+};
+
+function checkInventory(scannedItem) {
+    // Only change code below this line
+    return foods[scannedItem];
+    // Only change code above this line
+}
+
+console.log(checkInventory("apples"));
 // 16
+let foods = {
+    apples: 25,
+    oranges: 32,
+    plums: 28,
+    bananas: 13,
+    grapes: 35,
+    strawberries: 27
+};
+
+// Only change code below this line
+delete foods.oranges;
+delete foods.plums;
+delete foods.strawberries;
+// Only change code above this line
+
+console.log(foods);
 // 17
+let users = {
+    Alan: {
+        age: 27,
+        online: true
+    },
+    Jeff: {
+        age: 32,
+        online: true
+    },
+    Sarah: {
+        age: 48,
+        online: true
+    },
+    Ryan: {
+        age: 19,
+        online: true
+    }
+};
+
+function isEveryoneHere(obj) {
+    // Only change code below this line
+    return (obj.hasOwnProperty('Alan')) && (obj.hasOwnProperty('Jeff')) && (obj.hasOwnProperty('Sarah')) && (obj.hasOwnProperty('Ryan'))
+    // Only change code above this line
+}
+
+console.log(isEveryoneHere(users));
 // 18
+function countOnline(usersObj) {
+    // Only change code below this line
+    console.log('Enter')
+    let countOnline = 0;
+    for (let user in usersObj) {
+        if (usersObj[user].online === true) {
+            countOnline++;
+        }
+    }
+    return countOnline;
+    // Only change code above this line
+}
+
+console.log(countOnline({
+    Alan: {
+        online: false
+    },
+    Jeff: {
+        online: true
+    },
+    Sarah: {
+        online: false
+    }
+}))
 // 19
+let users = {
+    Alan: {
+        age: 27,
+        online: false
+    },
+    Jeff: {
+        age: 32,
+        online: true
+    },
+    Sarah: {
+        age: 48,
+        online: false
+    },
+    Ryan: {
+        age: 19,
+        online: true
+    }
+};
+
+function getArrayOfUsers(obj) {
+    // Only change code below this line
+    return Object.keys(obj);
+    // Only change code above this line
+}
+
+console.log(getArrayOfUsers(users));
 // 20
+let user = {
+    name: 'Kenneth',
+    age: 28,
+    data: {
+        username: 'kennethCodesAllDay',
+        joinDate: 'March 26, 2016',
+        organization: 'freeCodeCamp',
+        friends: [
+            'Sam',
+            'Kira',
+            'Tomo'
+        ],
+        location: {
+            city: 'San Francisco',
+            state: 'CA',
+            country: 'USA'
+        }
+    }
+};
+
+function addFriend(userObj, friend) {
+    // change code below this line
+    userObj.data.friends.push(friend);
+    return userObj.data.friends;
+    // change code above this line
+}
+
+console.log(addFriend(user, 'Pete'));
 // 21
 // 22
 // 23
