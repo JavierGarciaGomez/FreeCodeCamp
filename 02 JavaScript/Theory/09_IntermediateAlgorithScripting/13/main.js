@@ -5,12 +5,11 @@ In contrast, 4 is not prime since it is divisible by 1, 2 and 4.
 
 Rewrite sumPrimes so it returns the sum of all prime numbers that are less than or equal to num.*/
 
+////////////////////MINE//////////////////////////////
 function sumPrimes(num) {
     let sum = 0;
     for (let i = 1; i <= num; i++) {
-        console.log(i);
         if (checkIfIsPrime(i)) {
-            console.log('here')
             sum += i;
         }
     }
@@ -35,5 +34,6 @@ function checkIfIsPrime(num) {
     }
 
 }
+////////////////////FLORIN//////////////////////////////
 
 console.log(sumPrimes(10));
