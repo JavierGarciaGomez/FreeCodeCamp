@@ -41,7 +41,8 @@ let romanThousands = {
 }
 
 function convertToRoman(num) {
-    romanNumberArr = []
+    let romanNumberArr = []
+    let tempNum
     romanNumberArr.unshift(romanUnits[num % 10]);
     tempNum = (parseInt(num / 10)) % 10;
     romanNumberArr.unshift(romanTens[tempNum % 100]);
@@ -52,7 +53,7 @@ function convertToRoman(num) {
     romanNumberArr.unshift(romanThousands[tempNum % 100]);
 
 
-    return romanNum = romanNumberArr.join('');
+    return romanNumberArr.join('');
 }
 
 console.log(convertToRoman(3999)); // MMMCMXCIX
