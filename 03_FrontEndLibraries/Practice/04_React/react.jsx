@@ -259,4 +259,266 @@ class MyComponent extends React.Component {
 	}
 }
 
-//   26
+//   27
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+    // Change code below this line
+    this.increment = this.increment.bind(this);
+    this.decrement = this.decrement.bind(this);
+    this.reset = this.reset.bind(this);
+    // Change code above this line
+  }
+  // Change code below this line
+  increment () {
+    this.setState((state) =>({
+      count: state.count+1
+    }))
+  }
+  decrement () {
+    this.setState((state) =>({
+      count: state.count-1
+    }))
+  }
+  reset () {
+    this.setState((state) =>({
+      count: 0
+    }))
+  }
+  
+  // Change code above this line
+  render() {
+    return (
+      <div>
+        <button className='inc' onClick={this.increment}>Increment!</button>
+        <button className='dec' onClick={this.decrement}>Decrement!</button>
+        <button className='reset' onClick={this.reset}>Reset</button>
+        <h1>Current Count: {this.state.count}</h1>
+      </div>
+    );
+  }
+};
+
+// 27
+class ControlledInput extends React.Component {
+	constructor(props) {
+	  super(props);
+	  this.state = {
+		input: ''
+	  };
+	  // Change code below this line
+	  
+	  // Change code above this line
+	}
+	// Change code below this line
+	handleChange(event){
+	  let string = event.target.value
+	  console.log(string);
+	  this.setState({
+		input: string
+	  })
+	}
+	// Change code above this line
+	render() {
+	  return (
+		<div>
+		  { /* Change code below this line */}
+		  <input onChange = {this.handleChange.bind(this)} value={this.state.input}/>
+		  { /* Change code above this line */}
+		  <h4>Controlled Input:</h4>
+		  <p>{this.state.input}</p>
+		</div>
+	  );
+	}
+  };
+
+//   29
+// 29
+class MyForm extends React.Component {
+	constructor(props) {
+	  super(props);
+	  this.state = {
+		input: '',
+		submit: ''
+	  };
+	}
+	handleChange(event) {
+	  this.setState({
+		input: event.target.value
+	  });
+	}
+  
+	// saves the input value into submit
+	handleSubmit(event) {
+	  event.preventDefault();
+	  // Change code below this line
+	  console.log(event.target.value)
+	  // Change code above this line
+	  this.setState( state => ({
+		submit: state.input
+	  }))
+	}
+	render() {
+	  const {input, submit} = this.state;
+	  return (
+		<div>
+		  <form onSubmit={this.handleSubmit.bind(this)}>
+			{/* Change code below this line */}
+			<input onChange = {this.handleChange.bind(this)} value={input}/>
+			{/* Change code above this line */}
+			<button type='submit'>Submit!</button>
+		  </form>
+		  {/* Change code below this line */}
+		  <h1>{submit}</h1>
+		  {/* Change code above this line */}
+		</div>
+	  );
+	}
+  }
+
+//   30
+
+
+class MyApp extends React.Component {
+	constructor(props) {
+	  super(props);
+	  this.state = {
+		name: 'CamperBot'
+	  }
+	}
+	render() {
+	  console.log(this.state)
+	  return (
+		 <div>
+		   {/* Change code below this line */}
+		   <Navbar name={this.state.name}/>
+		   {/* Change code above this line */}
+		 </div>
+	  );
+	}console.log({this.props.input});
+  };
+  
+  class Navbar extends React.Component {
+	constructor(props) {
+	  super(props);
+	}
+	render() {
+	  return (
+	  <div>
+		{/* Change code below this line */}
+		<h1>Hello, my name is: {this.props.name}</h1>
+		{/* Change code above this line */}
+	  </div>
+	  );
+	}
+  };
+
+//   31 React: Pass a Callback as Props
+class MyApp extends React.Component {
+	constructor(props) {
+	  super(props);
+	  this.state = {
+		inputValue: ''
+	  }
+	  this.handleChange = this.handleChange.bind(this);
+	}
+	// method that sets the state inputValue
+	handleChange(event) {
+	  this.setState({
+		inputValue: event.target.value
+	  });
+	}
+	render() {
+	  console.log("hereee")
+	  console.log(this.state.inputValue)
+	  return (
+		 <div>
+		  { /* Change code below this line */ }
+		  // we call the child and pass the input and the handleChange method
+		  <GetInput input={this.state.inputValue} handleChange={this.handleChange}/>
+		  <RenderInput input={this.state.inputValue} />
+		  { /* Change code above this line */ }
+		 </div>
+	  );
+	}
+  };
+  
+  class GetInput extends React.Component {
+	constructor(props) {
+	  super(props);
+	}
+	
+	render() {
+	  return (
+		<div>
+		  <h3>Get Input:</h3>
+		  <input
+			// with this we set the value of the input (if We dont write anything, remains the same, because is equal of the value)
+			value={this.props.input}
+			// with this We call the method of the parent (myApp)
+			onChange={this.props.handleChange}/>
+		</div>
+	  );
+	}
+  };
+  
+  class RenderInput extends React.Component {
+	constructor(props) {
+	  super(props);
+	}
+	render() {
+	  return (
+		<div>
+		  <h3>Input Render:</h3>
+		  <p>{this.props.input}</p>
+		</div>
+	  );
+	}
+  };
+
+//   32
+
+class MyComponent extends React.Component {
+	constructor(props) {
+	  super(props);
+	}
+	componentWillMount() {
+	  // Change code below this line
+	  console.log("before mount")
+	  // Change code above this line
+	}
+	render() {
+	  return <div />
+	}
+  };
+
+//   33
+class MyComponent extends React.Component {
+	constructor(props) {
+	  super(props);
+	  this.state = {
+		activeUsers: null
+	  };
+	}
+	componentDidMount() {
+	  setTimeout(() => {
+		this.setState({
+		  activeUsers: 1273
+		});
+	  }, 2500);
+	}
+	render() {
+	  return (
+		<div>
+		  {/* Change code below this line */}
+		  <h1>Active Users: {this.state.activeUsers}</h1>
+		  {/* Change code above this line */}
+		</div>
+	  );
+	}
+  }
+
+//    34 Add Event Listeners
